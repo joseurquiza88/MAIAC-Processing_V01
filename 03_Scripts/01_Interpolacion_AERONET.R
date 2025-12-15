@@ -4,7 +4,7 @@
 # la longitud de onda proporcionada por MAIAC-MODIS 
 # AOD 550 nm a traves de diferentes metodologias mencionadas 
 # en la literatura
-###############################################################
+###
 
 
 ### Funcion para estimar AOD550 a partir del coeficiente de Ångström
