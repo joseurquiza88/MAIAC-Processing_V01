@@ -36,8 +36,8 @@ La carpeta [`/01_Requerimientos`](./01_Requerimientos/) incluye los **requerimie
 ---
 
 ## 📦 Dataset disponibles
-
-La carpeta [`/02_Datasets`](./02_Datasets) incluye los datasets generados en este proyecto para cada centro urbano generado.
+- La carpeta [`/02_Datasets`](./02_Datasets/) contiene los datasets utilizados en este análisis de AOD satelital.  
+  ⚠️ **Nota:** los nombres de los archivos y/o las rutas pueden diferir de los utilizados actualmente en el código, ya que el repositorio se encuentra en proceso de organización.
 
 ---
 
