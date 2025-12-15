@@ -10,21 +10,33 @@ from plots.regresion_maiac import COLOR_MAIAC
 # PATH
 # ===============================
 BASE_DIR = Path(__file__).resolve().parent
-DATA_DIR = (
-    BASE_DIR.parent
-    / "02_Datasets"
-    / "processed"
-    / "merge_AER-MAIAC"
-    / "Latam"
-    / "1km"
-    / "60mins"
-)
+# DATA_DIR = (
+#     BASE_DIR.parent
+    
+#     / "02_Datasets"
+#     / "processed"
+#     / "merge_AER-MAIAC"
+#     / "Latam"
+#     / "1km"
+#     / "60mins"
+# )
 
-AERONET_DIR = (
-    BASE_DIR.parent
-    / "02_Datasets"
-    / "AERONET"
-)
+# AERONET_DIR = (
+#     BASE_DIR.parent
+#     / "02_Datasets"
+#     / "AERONET"
+# )
+
+
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent  # esto apunta a 03_Scripts/app
+
+DATA_DIR = BASE_DIR.parent.parent / "02_Datasets" / "processed" / "merge_AER-MAIAC" / "Latam" / "1km" / "60mins"
+AERONET_DIR = BASE_DIR.parent.parent / "02_Datasets" / "AERONET"
+
+
+
 
 # ===============================
 # UI
