@@ -1,14 +1,14 @@
+
+# -------------------------------------------------
+# Librerias
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from pathlib import Path
 
-
-def aeronet_plot_latam(
-    path,
-    ciudad,
-    color="#000000"
-):
+# -------------------------------------------------
+# Funcion para mostrar la serie temporal de AERONET
+def aeronet_plot_latam(path, ciudad, color="#000000"):
     path = Path(path)
     files = list(path.glob(f"*_{ciudad}_*.csv"))
 
@@ -18,37 +18,33 @@ def aeronet_plot_latam(
     file = files[0]
     data = pd.read_csv(file)
 
-    data["Timestamp"] = pd.to_datetime(
-        data["date"],
-        format="mixed",
-        dayfirst=True,
-        errors="coerce"
-    )
-
+    #Poner en formato la fecha y setearlo como index
+    data["Timestamp"] = pd.to_datetime(data["date"], format="mixed", dayfirst=True, errors="coerce")
+    #Eliminar los NA
     data = data.dropna(subset=["Timestamp"])
     data.set_index("Timestamp", inplace=True)
     data = data.sort_index()
 
-    # =========================
+    # -------------------------------------------------
     # Serie diaria
-    # =========================
+    
     y = data["aod_550"].resample("1D").mean()
 
-    # (si querés fijar período)
+    # Fijar el periodo de interes
     y = y["2015-01-01":"2025-12-31"]
 
-    # =========================
+    # -------------------------------------------------
     # Métricas
-    # =========================
+ 
     metrics = {
         "mean": y.mean(),
         "std": y.std(),
         "n": int(y.count())
     }
 
-    # =========================
+    # -------------------------------------------------
     # Plot
-    # =========================
+
     fig, ax = plt.subplots(figsize=(8, 4), dpi=300)
 
     ax.plot(y, color=color, linewidth=1.2)

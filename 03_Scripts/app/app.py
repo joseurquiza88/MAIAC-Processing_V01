@@ -1,23 +1,17 @@
+#Libreroas
 import streamlit as st
 from pathlib import Path
 
 from plots.serie_temporal_AERONET import aeronet_plot_latam
-from plots.regresion_maiac import (
-    plot_regresion_maiac_csv,
-    get_ciudad_from_filename,
-    COLOR_MAIAC
-)
+from plots.regresion_maiac import (plot_regresion_maiac_csv, get_ciudad_from_filename, COLOR_MAIAC)
 from plots.comparativa_c60_c61 import plot_comparativa_c60_c61
 from plots.modis_maiac import plot_modis_maiac
 
+# -------------------------------------------------
+# Setear los path para los archivos en cada carpeta
 
-# ===============================
-# PATHS
-# ===============================
 BASE_DIR = Path(__file__).resolve().parent  # 03_Scripts/app
-
 AERONET_DIR = BASE_DIR.parent.parent / "02_Datasets" / "AERONET"
-
 REGRESION_DIR = (
     BASE_DIR.parent.parent
     / "02_Datasets"
@@ -43,30 +37,27 @@ MODIS_MAIAC_MODIS_DIR = (
     / "60mins"
 )
 
-# ===============================
-# STREAMLIT CONFIG
-# ===============================
-st.set_page_config(
-    page_title="Evaluación MAIAC vs AERONET",
-    layout="wide"
-)
+ # -------------------------------------------------
+# Configuracion del STREAMLIT
 
-st.markdown(
-    "<h2 style='text-align:center;'>Evaluación del desempeño de AOD satelital frente a AERONET</h2>",
+st.set_page_config(page_title="Evaluación MAIAC vs AERONET", layout="wide")
+
+# -------------------------------------------------
+# Titulo general
+st.markdown("<h2 style='text-align:center;'>Evaluación del desempeño de AOD satelital frente a AERONET</h2>",
     unsafe_allow_html=True
 )
 
+# Separar secciones entre los plots y texto
 st.divider()
 
-
-# ===============================
-# CARGA DE ARCHIVOS
-# ===============================
+# -------------------------------------------------
+# Cargar los archivos para cada funcion 
 files_reg = sorted(REGRESION_DIR.glob("*.csv"))
 files_comp = sorted(COMPARATIVA_DIR.glob("*.csv"))
 files_modis = sorted(MODIS_MAIAC_MODIS_DIR.glob("*.csv"))
 
-
+# Si no encuentra los achivos hay error
 if not files_reg:
     st.error("No hay archivos de regresión MAIAC C6.1")
     st.stop()
@@ -77,16 +68,14 @@ dict_comp = {get_ciudad_from_filename(f): f for f in files_comp}
 dict_modis = {get_ciudad_from_filename(f): f for f in files_modis}
 
 
-# ===============================
-# SELECTOR
-# ===============================
+# -------------------------------------------------
+# Seleccionar ciudad a partir de una lista
+
 # station_name = st.selectbox(
 #     "Seleccionar estación AERONET",
 #     sorted(dict_reg.keys())
 # )
-# ===============================
-# SELECTOR
-# ===============================
+
 col_sel, col_empty = st.columns([1.2, 4.8])
 
 with col_sel:
@@ -102,32 +91,33 @@ with col_sel:
     )
 
 
-
+# -------------------------------------------------
+# Tomar los nombres de la ciudades pra que se muestren en cada plot
 file_reg = dict_reg[station_name]
 file_comp = dict_comp.get(station_name)
 file_modis = dict_modis.get(station_name)
-
+# usar colroes
 color_ciudad = COLOR_MAIAC.get(station_name, "#666666")
 
 
-# ===============================
-# LAYOUT 2x2
-# ===============================
+# -------------------------------------------------
+# Configuracion del Layout 2 filas x 2 columnas
 col1, col2 = st.columns(2)
 
-# -------- SERIE TEMPORAL --------
+# -------------------------------------------------
+# Plot n° 1: Serie temporal de AERONET
 with col1:
     
-
     fig_ts, metrics_ts = aeronet_plot_latam(
         path=AERONET_DIR,
         ciudad=station_name,
         color=color_ciudad
     )
+    # Titulo de la seccion
     st.subheader("Serie temporal diaria AERONET")
     if fig_ts:
         st.pyplot(fig_ts, use_container_width=True)
-
+        #Metricas abajo del plot
         if metrics_ts:
             st.markdown(
                 f"""
@@ -143,8 +133,8 @@ with col1:
         st.warning("No hay datos AERONET")
 
 
-
-# -------- REGRESIÓN C6.1 --------
+# -------------------------------------------------
+# Plot n° 2: Regresión MAIAC C6.1 vs AERONET
 
 with col2:
     st.subheader("Regresión MAIAC C6.1 vs AERONET")
@@ -172,13 +162,14 @@ with col2:
 
 
 
-# ===============================
-# SEGUNDA FILA
-# ===============================
+# -------------------------------------------------
+# Dividir para generar una 2da fila
 st.divider()
 col3, col4 = st.columns(2)
 
-# -------- COMPARATIVA --------
+# -------------------------------------------------
+# Plot n° 3: Comparativa MAIAC C6.0 vs C6.1
+
 with col3:
     st.subheader("MAIAC C6.0 vs C6.1")
 
@@ -217,7 +208,9 @@ with col3:
         else:
             st.warning("Datos insuficientes para comparativa")
 
-# -------- MODIS vs MAIAC --------
+# -------------------------------------------------
+# Plot n° 4: Comparativa MAIAC vs MODIS
+
 with col4:
     st.subheader("MAIAC vs MODIS")
 
@@ -250,6 +243,7 @@ with col4:
         <b>Bias</b> = {metrics_mm['Bias_maiac']:.2f} &nbsp;|&nbsp;
         <b>n</b> = {metrics_mm['n_maiac']:.2f} &nbsp;|&nbsp;
     </div>
+
     """,
     unsafe_allow_html=True
 )
@@ -258,9 +252,9 @@ with col4:
 
 
 
-# ===============================
-# FOOTER
-# ===============================
+# -------------------------------------------------
+# Footer de la pagina
+
 st.divider()
 st.markdown(
     "<p style='text-align:center; font-size:13px;'>Validación de productos satelitales</p>",
