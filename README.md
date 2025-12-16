@@ -46,7 +46,7 @@ La carpeta [`/01_Requerimientos`](./01_Requerimientos/) incluye los **requerimie
 ## 🌐 Dashboard interactivo (🚧 En desarrollo)
 
 Objetivo: Visualizar y explora los resultados obtenidos en este proyecto para distintas ciudades de América Latina con un **dashboard interactivo en Streamlit**:
-- 🔹 [Abrir el dashboard](https://maiac-processingv01-zzzc3ygtsqwctkbhxtrrtl.streamlit.app/)
+- 🔹 [Abrir el dashboard](https://maiac-processingv01-wgkrecfxhazpyniya2qsd8.streamlit.app/)
 
 
 ---
