@@ -1,4 +1,4 @@
-# 📊 Procesamiento y análisis de productos satelitales de AOD en centros urbanos de América Latina
+# 📊 Procesamiento y análisis de AOD satelial en centros urbanos de América Latina
 
 ---
 - Este repositorio contiene scripts, notebooks y recursos para el **procesamiento y análisis de productos satelitales de Aerosol Optical Depth (AOD)** en centros urbanos de América Latina.
