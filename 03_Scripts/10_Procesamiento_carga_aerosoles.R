@@ -11,7 +11,7 @@
 
 ######################################################################
 
-dire <- "D:/Josefina/paper_git/paper_maiac/datasets/processed/M6M61-AER-MOD/" 
+dire <- "processed/M6M61-AER-MOD/" 
 # Local path where the .HDF files are located
 id <- dir(dire, pattern = ".csv")
 #Important: be located in the path where the files are located
@@ -121,7 +121,7 @@ for (i in 1: length(id)){
 
 
 # Guardamos csv para visualizarlo mejor
-write.csv(df_rbind,"D:/Josefina/paper_git/paper_maiac/plot/estadisticas/estadisticas_M6M61-MOD-AER-carga.csv")
+write.csv(df_rbind,"/estadisticas_M6M61-MOD-AER-carga.csv")
 
 
 

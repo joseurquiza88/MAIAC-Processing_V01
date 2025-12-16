@@ -7,25 +7,25 @@
 # 1. uniendo el timestamp, es decir los datos de fecha-hora 
 # 2. haciendo la media diaria
 # Leemos datos de ambas versiones
-data_c06 <- read.csv("D:/Josefina/paper_git/paper_maiac/datasets/maiac/C6.0/BA-25KM-MAIAC.csv")
-data_c061 <- read.csv("D:/Josefina/paper_git/paper_maiac/datasets/maiac/C6.1/BA-25KM-MAIAC_C61.csv")
+data_c06 <- read.csv("/maiac/C6.0/BA-25KM-MAIAC.csv")
+data_c061 <- read.csv("/C6.1/BA-25KM-MAIAC_C61.csv")
 
-data_c06 <- read.csv("D:/Josefina/paper_git/paper_maiac/datasets/maiac/C6.0/SP-25KM-MAIAC.csv")
-data_c061 <- read.csv("D:/Josefina/paper_git/paper_maiac/datasets/maiac/C6.1/SP-25KM-MAIAC_C61.csv")
+data_c06 <- read.csv("/C6.0/SP-25KM-MAIAC.csv")
+data_c061 <- read.csv("/C6.1/SP-25KM-MAIAC_C61.csv")
 
 #
-data_c06 <- read.csv("D:/Josefina/paper_git/paper_maiac/datasets/maiac/C6.0/ST-25KM-MAIAC.csv")
-data_c061 <- read.csv("D:/Josefina/paper_git/paper_maiac/datasets/maiac/C6.1/ST-25KM-MAIAC_C61.csv")
+data_c06 <- read.csv("/C6.0/ST-25KM-MAIAC.csv")
+data_c061 <- read.csv("/C6.1/ST-25KM-MAIAC_C61.csv")
 
 
-data_c06 <- read.csv("D:/Josefina/paper_git/paper_maiac/datasets/maiac/C6.0/LP-25KM-MAIAC.csv")
-data_c061 <- read.csv("D:/Josefina/paper_git/paper_maiac/datasets/maiac/C6.1/LP-25KM-MAIAC_C61.csv")
+data_c06 <- read.csv("/C6.0/LP-25KM-MAIAC.csv")
+data_c061 <- read.csv("/C6.1/LP-25KM-MAIAC_C61.csv")
 
-data_c06 <- read.csv("D:/Josefina/paper_git/paper_maiac/datasets/maiac/C6.0/MD-25KM-MAIAC.csv")
-data_c061 <- read.csv("D:/Josefina/paper_git/paper_maiac/datasets/maiac/C6.1/MD-25KM-MAIAC_C61.csv")
+data_c06 <- read.csv("/C6.0/MD-25KM-MAIAC.csv")
+data_c061 <- read.csv("/D:/Josefina/paper_git/paper_maiac/datasets/maiac/C6.1/MD-25KM-MAIAC_C61.csv")
 
-data_c06 <- read.csv("D:/Josefina/paper_git/paper_maiac/datasets/maiac/C6.0/MX-25KM-MAIAC.csv")
-data_c061 <- read.csv("D:/Josefina/paper_git/paper_maiac/datasets/maiac/C6.1/MX-25KM-MAIAC_C61.csv")
+data_c06 <- read.csv("/C6.0/MX-25KM-MAIAC.csv")
+data_c061 <- read.csv("DC6.1/MX-25KM-MAIAC_C61.csv")
 
 
 data_c06$timestamp2 <- paste(data_c06$date,data_c06$hora,sep="")
@@ -53,12 +53,12 @@ df <- data.frame(date = data_tot$date ,
 # eliminamos nans
 df2  <- df[complete.cases(df), ]
 # guardamos
-#write.csv (df2,"D:/Josefina/paper_git/paper_maiac/datasets/maiac_comparativas_versiones_hora/BA-25KM-MAIAC_comparativa.csv")
-#write.csv (df2,"D:/Josefina/paper_git/paper_maiac/datasets/maiac_comparativas_versiones_hora/SP-25KM-MAIAC_comparativa.csv")
-#write.csv (df2,"D:/Josefina/paper_git/paper_maiac/datasets/maiac_comparativas_versiones_hora/ST-25KM-MAIAC_comparativa.csv")
-#write.csv (df2,"D:/Josefina/paper_git/paper_maiac/datasets/maiac_comparativas_versiones_hora/LP-25KM-MAIAC_comparativa.csv")
-#write.csv (df2,"D:/Josefina/paper_git/paper_maiac/datasets/maiac_comparativas_versiones_hora/4_MD-25KM-MAIAC_comparativa.csv")
-write.csv (df2,"D:/Josefina/paper_git/paper_maiac/datasets/maiac_comparativas_versiones_hora/6_MX-25KM-MAIAC_comparativa.csv")
+#write.csv (df2,"/BA-25KM-MAIAC_comparativa.csv")
+#write.csv (df2,"/SP-25KM-MAIAC_comparativa.csv")
+#write.csv (df2,"/ST-25KM-MAIAC_comparativa.csv")
+#write.csv (df2,"/LP-25KM-MAIAC_comparativa.csv")
+#write.csv (df2,"/4_MD-25KM-MAIAC_comparativa.csv")
+write.csv (df2,"D/6_MX-25KM-MAIAC_comparativa.csv")
 
 
 ######### 
@@ -81,19 +81,19 @@ df_rbind$date <- as.POSIXct(strptime(df_rbind$dat_C06, format = "%Y%j"))
 # eliminamos nans
 df3  <- df_rbind[complete.cases(df_rbind), ]
 # guardamos
-#write.csv (df3,"D:/Josefina/paper_git/paper_maiac/datasets/maiac_comparativas_versiones_dia/BA-25KM-MAIAC_comparativa_dia.csv")
-#write.csv (df3,"D:/Josefina/paper_git/paper_maiac/datasets/maiac_comparativas_versiones_dia/SP-25KM-MAIAC_comparativa_dia.csv")
-#write.csv (df3,"D:/Josefina/paper_git/paper_maiac/datasets/maiac_comparativas_versiones_dia/ST-25KM-MAIAC_comparativa_dia.csv")
-#write.csv (df3,"D:/Josefina/paper_git/paper_maiac/datasets/maiac_comparativas_versiones_dia/LP-25KM-MAIAC_comparativa_dia.csv")
-#write.csv (df3,"D:/Josefina/paper_git/paper_maiac/datasets/maiac_comparativas_versiones_dia/4_MD-25KM-MAIAC_comparativa_dia.csv")
-write.csv (df3,"D:/Josefina/paper_git/paper_maiac/datasets/maiac_comparativas_versiones_dia/6_MX-25KM-MAIAC_comparativa_dia.csv")
+#write.csv (df3,"/BA-25KM-MAIAC_comparativa_dia.csv")
+#write.csv (df3,"/SP-25KM-MAIAC_comparativa_dia.csv")
+#write.csv (df3,"/ST-25KM-MAIAC_comparativa_dia.csv")
+#write.csv (df3,"LP-25KM-MAIAC_comparativa_dia.csv")
+#write.csv (df3,"/4_MD-25KM-MAIAC_comparativa_dia.csv")
+write.csv (df3,"/6_MX-25KM-MAIAC_comparativa_dia.csv")
 
 
 ################################################################################### 
 #Comparativa de Aqua vs terra
 
-data_c06 <- read.csv("D:/Josefina/paper_git/paper_maiac/datasets/maiac/C6.0/BA-25KM-MAIAC.csv")
-data_c061 <- read.csv("D:/Josefina/paper_git/paper_maiac/datasets/maiac/C6.1/BA-25KM-MAIAC_C61.csv")
+data_c06 <- read.csv("maiac/C6.0/BA-25KM-MAIAC.csv")
+data_c061 <- read.csv("/maiac/C6.1/BA-25KM-MAIAC_C61.csv")
 data_c06$timestamp2 <- paste(data_c06$date,data_c06$hora,sep="")
 data_c061$timestamp2 <- paste(data_c061$date,data_c061$hora,sep="")
 
@@ -126,17 +126,17 @@ data_terra <- data_complete[data_complete$AOD_Type_C06 == "T",]
 #cortamos aqua
 data_aqua <- data_complete[data_complete$AOD_Type_C06 == "A",]
 # guardamos
-# write.csv (data_terra,"D:/Josefina/paper_git/paper_maiac/datasets/maiac_comparativas_versiones_sat/terra/BA-25KM-MAIAC-T_comparativa.csv")
-# write.csv (data_aqua,"D:/Josefina/paper_git/paper_maiac/datasets/maiac_comparativas_versiones_sat/aqua/BA-25KM-MAIAC-A_comparativa.csv")
-# write.csv (data_terra,"D:/Josefina/paper_git/paper_maiac/datasets/maiac_comparativas_versiones_sat/terra/SP-25KM-MAIAC-T_comparativa.csv")
-# write.csv (data_aqua,"D:/Josefina/paper_git/paper_maiac/datasets/maiac_comparativas_versiones_sat/aqua/SP-25KM-MAIAC-A_comparativa.csv")
+# write.csv (data_terra,"/maiac_comparativas_versiones_sat/terra/BA-25KM-MAIAC-T_comparativa.csv")
+# write.csv (data_aqua,"/maiac_comparativas_versiones_sat/aqua/BA-25KM-MAIAC-A_comparativa.csv")
+# write.csv (data_terra,"/maiac_comparativas_versiones_sat/terra/SP-25KM-MAIAC-T_comparativa.csv")
+# write.csv (data_aqua,"/maiac_comparativas_versiones_sat/aqua/SP-25KM-MAIAC-A_comparativa.csv")
 
-# write.csv (data_terra,"D:/Josefina/paper_git/paper_maiac/datasets/maiac_comparativas_versiones_sat/terra/ST-25KM-MAIAC-T_comparativa.csv")
-# write.csv (data_aqua,"D:/Josefina/paper_git/paper_maiac/datasets/maiac_comparativas_versiones_sat/aqua/ST-25KM-MAIAC-A_comparativa.csv")
+# write.csv (data_terra,"/maiac_comparativas_versiones_sat/terra/ST-25KM-MAIAC-T_comparativa.csv")
+# write.csv (data_aqua,"/maiac_comparativas_versiones_sat/aqua/ST-25KM-MAIAC-A_comparativa.csv")
 
-#write.csv (data_terra,"D:/Josefina/paper_git/paper_maiac/datasets/maiac_comparativas_versiones_sat/terra/LP-25KM-MAIAC-T_comparativa.csv")
-#write.csv (data_aqua,"D:/Josefina/paper_git/paper_maiac/datasets/maiac_comparativas_versiones_sat/aqua/LP-25KM-MAIAC-A_comparativa.csv")
-#write.csv (data_terra,"D:/Josefina/paper_git/paper_maiac/datasets/maiac_comparativas_versiones_sat/terra/4_MD-25KM-MAIAC-T_comparativa.csv")
-#write.csv (data_aqua,"D:/Josefina/paper_git/paper_maiac/datasets/maiac_comparativas_versiones_sat/aqua/4_MD-25KM-MAIAC-A_comparativa.csv")
-write.csv (data_terra,"D:/Josefina/paper_git/paper_maiac/datasets/maiac_comparativas_versiones_sat/terra/6_MX-25KM-MAIAC-T_comparativa.csv")
-write.csv (data_aqua,"D:/Josefina/paper_git/paper_maiac/datasets/maiac_comparativas_versiones_sat/aqua/6_MX-25KM-MAIAC-A_comparativa.csv")
+#write.csv (data_terra,"/maiac_comparativas_versiones_sat/terra/LP-25KM-MAIAC-T_comparativa.csv")
+#write.csv (data_aqua,"/maiac_comparativas_versiones_sat/aqua/LP-25KM-MAIAC-A_comparativa.csv")
+#write.csv (data_terra,"/maiac_comparativas_versiones_sat/terra/4_MD-25KM-MAIAC-T_comparativa.csv")
+#write.csv (data_aqua,"/maiac_comparativas_versiones_sat/aqua/4_MD-25KM-MAIAC-A_comparativa.csv")
+write.csv (data_terra,"/maiac_comparativas_versiones_sat/terra/6_MX-25KM-MAIAC-T_comparativa.csv")
+write.csv (data_aqua,"/maiac_comparativas_versiones_sat/aqua/6_MX-25KM-MAIAC-A_comparativa.csv")

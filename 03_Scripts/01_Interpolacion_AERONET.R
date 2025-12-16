@@ -115,20 +115,10 @@ interpolate_s <- function(path,path_write){
 
 ####################################################################
 # Pruebas de uso
-interpolate(path="D:/Josefina/papers_escritos/MAIAC_paper/datasets/aeronet/datasets",path_write="D:/Josefina/papers_escritos/MAIAC_paper/datasets/aeronet/datasets_interp/")
-interpolate_s (path="D:/Josefina/papers_escritos/MAIAC_paper/datasets/aeronet/datasets",path_write="D:/Josefina/papers_escritos/MAIAC_paper/datasets/aeronet/datasets_interp_s_v2/")
-interpolate_s (path="D:/Josefina/paper_git/paper_maiac/datasets/aeronet/datasets",path_write="D:/Josefina/paper_git/paper_maiac/datasets/aeronet/datasets_interp_s_v2/")
-interpolate (path="D:/Josefina/Proyectos/aeronet/datos/GSFC",path_write="D:/Josefina/Proyectos/aeronet/datos/GSFC/interpolado/")
-interpolate_s (path="D:/Josefina/Proyectos/aeronet/datos/GSFC",path_write="D:/Josefina/Proyectos/aeronet/datos/GSFC/interpolado/")
-interpolate_s (path="D:/Josefina/Proyectos/aeronet/datos/MD_Science_Center",path_write="D:/Josefina/Proyectos/aeronet/datos/MD_Science_Center/interpolado/")
+interpolate(path=" ",path_write=" ")
+interpolate_s (path=" ",path_write=" ")
 
 # VERSION 02
-interpolate(path="D:/Josefina/Proyectos/aeronet/datos/AERONET_02112023_L02/original",path_write="D:/Josefina/Proyectos/aeronet/datos/AERONET_02112023_L02/interpolate")
-interpolate_s (path="D:/Josefina/Proyectos/aeronet/datos/AERONET_02112023_L02/original",path_write="D:/Josefina/Proyectos/aeronet/datos/AERONET_02112023_L02/interpolate/")
-
-
-# Actualizacopn 2023-2024
-path <- "D:/Josefina/paper_git/paper_maiac/datasets/V02/aeronet/periodoFaltante_2023-2024/data/"
-path_write <- "D:/Josefina/paper_git/paper_maiac/datasets/V02/aeronet/periodoFaltante_2023-2024/proceed/"
-
+interpolate(path=" ",path_write=" ")
+interpolate_s (path=" ",path_write=" ")
 

@@ -5,8 +5,8 @@
 
 
 
-data_maiac <- read.csv("D:/Josefina/paper_git/paper_maiac/datasets/processed/M6M61AER/1_SP-MAIAC-V6-61-AER_DIA.csv")
-data_modis <- read.csv("D:/Josefina/paper_git/paper_maiac/datasets/processed/MMA-C61/1_SP-25KM-MM-60-AER-C61.csv")
+data_maiac <- read.csv("/M6M61AER/1_SP-MAIAC-V6-61-AER_DIA.csv")
+data_modis <- read.csv("/MMA-C61/1_SP-25KM-MM-60-AER-C61.csv")
 
 
 
@@ -23,5 +23,5 @@ merge_sat <- data.frame(date = merge_sat$date,
                         AOD_550_AER_mean = merge_sat$AOD_550_AER_mean)
 
 
-write.csv(merge_sat,"D:/Josefina/paper_git/paper_maiac/datasets/processed/M6M61-AER-MOD/1_SP-25KM-60-M6M61-AER-MOD.csv")
+write.csv(merge_sat,"/M6M61-AER-MOD/1_SP-25KM-60-M6M61-AER-MOD.csv")
 

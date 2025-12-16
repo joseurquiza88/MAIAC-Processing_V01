@@ -97,8 +97,8 @@ time_correlation_MMA <- function(path_aeronet,path_modis){
 ######     -------  Ejemplo para una estacion     -------  ######
 
 #C6.1, Daily mean C6.1
-data_modis_BA <- "D:/Josefina/paper_git/paper_maiac/datasets/processed/MODIS/MODIS_dia/BA-25KM-MODIS-60-AER-DIA.csv.csv"
-data_aeronet_BA <-"D:/Josefina/paper_git/paper_maiac/datasets/processed/C6.1/dia/3_BA-25KM-MAIAC-60-AER_MEAN.csv"
+data_modis_BA <- "/MODIS/BA-25KM-MODIS-60-AER-DIA.csv.csv"
+data_aeronet_BA <-"/processed/C6.1/dia/3_BA-25KM-MAIAC-60-AER_MEAN.csv"
 combinate_BA <- time_correlation_MMA (path_aeronet=data_aeronet_BA,path_modis=data_modis_BA)
 # Save the file with co-located data from AERONET and modis on local path
-write.csv (combinate_BA,"D:/Josefina/paper_git/paper_maiac/datasets/processed/MMA/BA-25KM-MM-60-AER.csv")
+write.csv (combinate_BA,"BA-25KM-MM-60-AER.csv")

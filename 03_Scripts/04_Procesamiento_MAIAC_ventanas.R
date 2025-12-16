@@ -138,8 +138,8 @@ num_estacion <- 7
 # BA
 #SP
 #combinate_SP <- read.csv("D:/Josefina/paper_git/paper_maiac/datasets/V02/processed/Latam_C61/tot/1_SP-25KM-MAIAC-60-AER.csv")
-combinate <- read.csv(paste("D:/Josefina/paper_git/paper_maiac/datasets/V02/processed/merge_AER-MAIAC/Latam_C61/tot/",buffer_spatial,"/",num_estacion ,"_",city ,"-",buffer_spatial ,"-MAIAC-",buffer_time ,"-AER_C61.csv",sep=""))
+combinate <- read.csv(paste("/",buffer_spatial,"/",num_estacion ,"_",city ,"-",buffer_spatial ,"-MAIAC-",buffer_time ,"-AER_C61.csv",sep=""))
 
 SP_com_promedios <- promedios(combinate)
-write.csv(SP_com_promedios,paste("D:/Josefina/paper_git/paper_maiac/datasets/V02/processed/merge_AER-MAIAC/Latam_C61/dia/",buffer_spatial,"/",num_estacion,"_",city,"-",buffer_spatial,"-MAIAC-",buffer_time,"-AER_MEAN_C61.csv",sep=""))
+write.csv(SP_com_promedios,paste("/",buffer_spatial,"/",num_estacion,"_",city,"-",buffer_spatial,"-MAIAC-",buffer_time,"-AER_MEAN_C61.csv",sep=""))
 

@@ -90,18 +90,18 @@ time_correlation <- function(path_aeronet,path_modis,time_buffer){
 buffer_time <- 60 #minutes
 
 #Cambiar directorio segun archivo
-data_modis <- "D:/Josefina/papers_escritos/paper_maiac/datasets/modis/BA-25KM-MODIS.csv"
-data_aerone <-"D:/Josefina/papers_escritos/paper_maiac/datasets/aeronet/datasets_interp_s/BA_2015-2022_interp-s.csv"
+data_modis <- "/modis/BA-25KM-MODIS.csv"
+data_aerone <-"/BA_2015-2022_interp-s.csv"
 combinate <- time_correlation (path_aeronet=data_aeronet_BA,path_modis=data_modis_BA,time_buffer=buffer_time)
 # Guardar el archivo con los datos co-localizados de AERONET y MODIS en la ruta local.
-write.csv (combinate,"D:/Josefina/papers_escritos/paper_maiac/datasets/processed/BA-25KM-MODIS-60-AER.csv")
+write.csv (combinate,"/processed/BA-25KM-MODIS-60-AER.csv")
 
 
 ###############################################################################
 ###############################################################################
 # Prueba para revisar promedios diarios de MODIS-AERONET
 
-dire <- "D:/Josefina/paper_git/paper_maiac/datasets/processed/MODIS/MODIS_tot/" 
+dire <- "/MODIS/MODIS_tot/" 
 # directorio donde estan los archivos procesados
 id <- dir(dire, pattern = ".csv")
 setwd(dire) 
@@ -118,7 +118,7 @@ for (i in 1:length(id)){
     df_rbind <- rbind(df_rbind ,df)
   }
   print(substr(id[i],1,20))
-  name <- paste("D:/Josefina/paper_git/paper_maiac/datasets/processed/MODIS/MODIS_dia/",substr(id[i],1,20),"-DIA.csv",sep = "")
+  name <- paste("/MODIS/",substr(id[i],1,20),"-DIA.csv",sep = "")
   write.csv(df_rbind,name)
 }
 

@@ -288,4 +288,4 @@ for (i in 1:length(id)){
   hdf_df_30000  <- rbind( hdf_df_30000 ,df_30000)
 }
 dire
-write.csv(hdf_df_30000 ,file = "prueba_30km_mex_04-07_2022.csv")
+write.csv(hdf_df_30000 ,file = "prueba.csv")

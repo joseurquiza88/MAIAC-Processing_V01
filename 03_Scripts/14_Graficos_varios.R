@@ -6,7 +6,7 @@
 ######################################################################
 
 #Filtrar info de interes
-metricas <- read_csv("D:/Josefina/paper_git/paper_maiac/datasets/V02/processed/final/metricas.csv")
+metricas <- read_csv("/final/metricas.csv")
 metricas <- metricas[metricas$collection == "C61",]
 
 metricas <- metricas[metricas$region == "latam",]
@@ -39,7 +39,7 @@ plot_1 <- ggplot(metricas_subset, aes(x = espacial , y = valor, color =estacion 
   #theme_minimal()
 
 #guardar plot
-ggsave("D:/Josefina/paper_git/paper_maiac/plot/V04/MAIAC-C61-Latam-R2_v03.png",a,
+ggsave("V04/MAIAC-C61-Latam-R2_v03.png",a,
        width = 10,
        height = 8,
        units = "cm",
@@ -78,7 +78,7 @@ plot_2 <- ggplot(metricas_subset, aes(x = estacion, y = valor, color = estacion)
 # Mostrar grafico
 print(a)
 # Se guarda
-ggsave("D:/Josefina/paper_git/paper_maiac/plot/V04/MAIAC-C61-Latam-R2_v02.png",a,
+ggsave("/V04/MAIAC-C61-Latam-R2_v02.png",a,
        width = 10,
        height = 8,
        units = "cm",
@@ -115,7 +115,7 @@ plot_4 <- ggplot(metricas_subset, aes(y = valor, x = temporal, size = espacial, 
   ) + 
   theme_classic() + theme(legend.position = "none")  # Elimina la leyenda
 
-ggsave("D:/Josefina/paper_git/paper_maiac/plot/V03/MAIAC-C61-Latam-R2-TemporalWindow.png",
+ggsave("/V03/MAIAC-C61-Latam-R2-TemporalWindow.png",
        f,
        width = 10,
        height = 8,
@@ -593,7 +593,7 @@ R2_latam_60
 ###############################################################################
 ##                        r2 promedio espacial LATAM 61
 ###############################################################################
-metricas <- read_csv("D:/Josefina/paper_git/paper_maiac/datasets/V02/processed/final/metricas.csv")
+metricas <- read_csv("V02/processed/final/metricas.csv")
 metricas <- metricas[metricas$collection == "C61",]
 metricas <- metricas[metricas$region == "latam",]
 metricas$temporal <- factor(metricas$temporal)
@@ -625,7 +625,7 @@ R2_latam_61
 ###############################################################################
 ##                        r2 promedio espacial eu 61
 ###############################################################################
-metricas <- read_csv("D:/Josefina/paper_git/paper_maiac/datasets/V02/processed/final/metricas.csv")
+metricas <- read_csv("/V02/processed/final/metricas.csv")
 metricas <- metricas[metricas$collection == "C61",]
 
 metricas <- metricas[metricas$region == "USA",]
@@ -659,7 +659,7 @@ R2_USA_61
 ###############################################################################
 ##                        r2 promedio espacial eu 60
 ###############################################################################
-metricas <- read_csv("D:/Josefina/paper_git/paper_maiac/datasets/V02/processed/final/metricas.csv")
+metricas <- read_csv("/V02/processed/final/metricas.csv")
 metricas <- metricas[metricas$collection == "C60",]
 
 metricas <- metricas[metricas$region == "USA",]
@@ -694,7 +694,7 @@ R2_USA_60
 ###############################################################################
 ##                        RMSE promedio espacial LATAM 61
 ###############################################################################
-metricas <- read_csv("D:/Josefina/paper_git/paper_maiac/datasets/V02/processed/final/metricas.csv")
+metricas <- read_csv("V02/processed/final/metricas.csv")
 metricas <- metricas[metricas$collection == "C60",]
 
 metricas <- metricas[metricas$region == "latam",]
@@ -727,7 +727,7 @@ rmse_latam_60
 ###############################################################################
 ##                        RMSE promedio espacial LATAM 61
 ###############################################################################
-metricas <- read_csv("D:/Josefina/paper_git/paper_maiac/datasets/V02/processed/final/metricas.csv")
+metricas <- read_csv("/V02/processed/final/metricas.csv")
 metricas <- metricas[metricas$collection == "C61",]
 metricas <- metricas[metricas$region == "latam",]
 metricas$temporal <- factor(metricas$temporal)
@@ -759,7 +759,7 @@ rmse_latam_61
 ###############################################################################
 ##                        rmse promedio espacial eu 61
 ###############################################################################
-metricas <- read_csv("D:/Josefina/paper_git/paper_maiac/datasets/V02/processed/final/metricas.csv")
+metricas <- read_csv("/V02/processed/final/metricas.csv")
 metricas <- metricas[metricas$collection == "C61",]
 
 metricas <- metricas[metricas$region == "USA",]
@@ -794,7 +794,7 @@ rmse_USA_61
 ###############################################################################
 ##                        rmse promedio espacial eu 61
 ###############################################################################
-metricas <- read_csv("D:/Josefina/paper_git/paper_maiac/datasets/V02/processed/final/metricas.csv")
+metricas <- read_csv("/V02/processed/final/metricas.csv")
 metricas <- metricas[metricas$collection == "C60",]
 
 metricas <- metricas[metricas$region == "USA",]
@@ -829,7 +829,7 @@ rmse_USA_60
 ###############################################################################
 ##                       BIAS  promedio espacial LATAM 61
 ###############################################################################
-metricas <- read_csv("D:/Josefina/paper_git/paper_maiac/datasets/V02/processed/final/metricas.csv")
+metricas <- read_csv("/V02/processed/final/metricas.csv")
 metricas <- metricas[metricas$collection == "C60",]
 
 metricas <- metricas[metricas$region == "latam",]
@@ -862,7 +862,7 @@ bias_latam_60
 ###############################################################################
 ##                       bias  promedio espacial LATAM 61
 ###############################################################################
-metricas <- read_csv("D:/Josefina/paper_git/paper_maiac/datasets/V02/processed/final/metricas.csv")
+metricas <- read_csv("/V02/processed/final/metricas.csv")
 metricas <- metricas[metricas$collection == "C61",]
 metricas <- metricas[metricas$region == "latam",]
 metricas$temporal <- factor(metricas$temporal)
@@ -894,7 +894,7 @@ bias_latam_61
 ###############################################################################
 ##                        bias promedio espacial eu 61
 ###############################################################################
-metricas <- read_csv("D:/Josefina/paper_git/paper_maiac/datasets/V02/processed/final/metricas.csv")
+metricas <- read_csv("/V02/processed/final/metricas.csv")
 metricas <- metricas[metricas$collection == "C61",]
 
 metricas <- metricas[metricas$region == "USA",]
@@ -928,7 +928,7 @@ bias_USA_61
 ###############################################################################
 ##                        bias promedio espacial eu 61
 ###############################################################################
-metricas <- read_csv("D:/Josefina/paper_git/paper_maiac/datasets/V02/processed/final/metricas.csv")
+metricas <- read_csv("/V02/processed/final/metricas.csv")
 metricas <- metricas[metricas$collection == "C60",]
 
 metricas <- metricas[metricas$region == "USA",]
@@ -963,7 +963,7 @@ bias_USA_60
 ###############################################################################
 ##                       reux  promedio espacial LATAM 61
 ###############################################################################
-metricas <- read_csv("D:/Josefina/paper_git/paper_maiac/datasets/V02/processed/final/metricas.csv")
+metricas <- read_csv("/V02/processed/final/metricas.csv")
 metricas <- metricas[metricas$collection == "C60",]
 
 metricas <- metricas[metricas$region == "latam",]
@@ -996,7 +996,7 @@ reux_latam_60
 ###############################################################################
 ##                       reux  promedio espacial LATAM 61
 ###############################################################################
-metricas <- read_csv("D:/Josefina/paper_git/paper_maiac/datasets/V02/processed/final/metricas.csv")
+metricas <- read_csv("/V02/processed/final/metricas.csv")
 metricas <- metricas[metricas$collection == "C61",]
 metricas <- metricas[metricas$region == "latam",]
 metricas$temporal <- factor(metricas$temporal)
@@ -1029,7 +1029,7 @@ reux_latam_61
 ###############################################################################
 ##                        reux promedio espacial eu 61
 ###############################################################################
-metricas <- read_csv("D:/Josefina/paper_git/paper_maiac/datasets/V02/processed/final/metricas.csv")
+metricas <- read_csv("/V02/processed/final/metricas.csv")
 metricas <- metricas[metricas$collection == "C61",]
 
 metricas <- metricas[metricas$region == "USA",]
@@ -1064,7 +1064,7 @@ reux_USA_61
 ###############################################################################
 ##                        reux promedio espacial eu 61
 ###############################################################################
-metricas <- read_csv("D:/Josefina/paper_git/paper_maiac/datasets/V02/processed/final/metricas.csv")
+metricas <- read_csv("/V02/processed/final/metricas.csv")
 metricas <- metricas[metricas$collection == "C60",]
 
 metricas <- metricas[metricas$region == "USA",]

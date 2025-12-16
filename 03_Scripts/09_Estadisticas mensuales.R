@@ -48,8 +48,8 @@ monthly_statistics <- function (path, group,path_write){
 }
 
 ## Correr funcion
-path <- "D:/Josefina/paper_git/paper_maiac/datasets/processed/MMA_v2/"
-path_write <- "D:/Josefina/paper_git/paper_maiac/datasets/processed/MMA_v2/statistics/"
+path <- "/processed/MMA_v2/"
+path_write <- "/processed/MMA_v2/statistics/"
 group <- "month"
 group <- "month_year"
 monthly_statistics (path, group,path_write)

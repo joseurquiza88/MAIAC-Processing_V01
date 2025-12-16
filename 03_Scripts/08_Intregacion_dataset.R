@@ -8,7 +8,7 @@
 fecha <- as.data.frame(seq.Date(as.Date(ISOdate(2015,01,01)), as.Date(ISOdate(2022,12,31)), by = "day", tz = "GMT")) 
 names(fecha )<- "date"
 ##    ------    DATOS BA
-ba <- read.csv("D:/Josefina/paper_git/paper_maiac/datasets/processed/BA-25KM-MAIAC-60-AER.csv")
+ba <- read.csv("/processed/BA-25KM-MAIAC-60-AER.csv")
 ba %>%
   group_by(Date_MODIS) %>%  
   group_split() -> data_ba
@@ -25,7 +25,7 @@ df_ba_salida$date <- as.Date( df_ba_salida$date, format = "%Y-%m-%d")
 ba_tot<- merge(df_ba_salida, fecha, by = "date", all = TRUE)
 
 ##    ------    DATOS SP
-sp <- read.csv("D:/Josefina/paper_git/paper_maiac/datasets/processed/SP-25KM-MAIAC-60-AER.csv")
+sp <- read.csv("/processed/SP-25KM-MAIAC-60-AER.csv")
 sp %>%
   group_by(Date_MODIS) %>%  
   group_split() -> data_sp
@@ -44,7 +44,7 @@ sp_tot<- merge(df_sp_salida, fecha, by = "date", all = TRUE)
 
 
 ##    ------    DATOS ST
-st <- read.csv("D:/Josefina/paper_git/paper_maiac/datasets/processed/ST-25KM-MAIAC-60-AER.csv")
+st <- read.csv("/processed/ST-25KM-MAIAC-60-AER.csv")
 st %>%
   group_by(Date_MODIS) %>%  
   group_split() -> data_st
@@ -61,7 +61,7 @@ st_tot<- merge(df_st_salida, fecha, by = "date", all = TRUE)
 
 
 ##    ------    DATOS MD
-md <- read.csv("D:/Josefina/paper_git/paper_maiac/datasets/processed/MD-25KM-MAIAC-60-AER.csv")
+md <- read.csv("/processed/MD-25KM-MAIAC-60-AER.csv")
 md %>%
   group_by(Date_MODIS) %>%  
   group_split() -> data_md
@@ -78,7 +78,7 @@ md_tot<- merge(df_md_salida, fecha, by = "date", all = TRUE)
 
 
 ##    ------    DATOS LP
-lp <- read.csv("D:/Josefina/paper_git/paper_maiac/datasets/processed/LP-25KM-MAIAC-60-AER.csv")
+lp <- read.csv("/processed/LP-25KM-MAIAC-60-AER.csv")
 lp %>%
   group_by(Date_MODIS) %>%  
   group_split() -> data_lp
@@ -95,7 +95,7 @@ lp_tot<- merge(df_lp_salida, fecha, by = "date", all = TRUE)
 
 
 ##    ------    DATOS MX
-mx <- read.csv("D:/Josefina/paper_git/paper_maiac/datasets/processed/MX-25KM-MAIAC-60-AER.csv")
+mx <- read.csv("/processed/MX-25KM-MAIAC-60-AER.csv")
 mx %>%
   group_by(Date_MODIS) %>%  
   group_split() -> data_mx

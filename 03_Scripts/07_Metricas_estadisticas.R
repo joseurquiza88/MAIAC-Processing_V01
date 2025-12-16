@@ -212,7 +212,7 @@ df_tot$buffer <- substr(df_tot$name,6,9)
 df_tot$temp <-substr(df_tot$name,17,18)
 getwd()
 
-write.csv(df_tot,"D:/Josefina/paper_git/paper_maiac/datasets/V02/processed/USA_C60/tot/estadisticas_BTEMP-ESP-C61.csv")
+write.csv(df_tot,"/tot/estadisticas_BTEMP-ESP-C61.csv")
 ########################################
 #Queremos saber cual es el mejor buffer
 # Minimo RMSE, Minimo Bias (abs), Maximo RMSE
@@ -262,5 +262,5 @@ for(x in 1:length(group_dat_ciudad)){
 
 
 
-write.csv(df_rbind, "D:/Josefina/paper_git/paper_maiac/datasets/V02/processed/Latam_C61/tot/estadisticas_BTEMP-ESP-C613.csv")
+write.csv(df_rbind, "/tot/estadisticas_BTEMP-ESP-C613.csv")
 
