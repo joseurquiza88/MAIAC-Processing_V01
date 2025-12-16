@@ -63,7 +63,8 @@ def plot_regresion_maiac_csv(
     model = LinearRegression().fit(x_p, y.values.reshape(-1, 1))
     y_pred = model.predict(x_p)
 
-    fig, ax = plt.subplots(figsize=(4, 4), dpi=100)
+    
+    fig, ax = plt.subplots(figsize=(8, 4), dpi=300)
 
 
     ax.scatter(x, y, alpha=0.4, s=8, color=color)
@@ -72,9 +73,10 @@ def plot_regresion_maiac_csv(
 
     ax.set_xlim(0, 1.8)
     ax.set_ylim(0, 1.8)
-
+    ax.tick_params(labelsize=11)
     ax.set_xlabel("AOD AERONET", fontsize=11)
     ax.set_ylabel("AOD MAIAC", fontsize=11)
+    #ax.legend(fontsize=9)
 
 
     # ax.text(0.05, 0.95, f"$R^2$ = {R2:.2f}", transform=ax.transAxes)
