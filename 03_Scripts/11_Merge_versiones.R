@@ -1,12 +1,15 @@
 
 #######################################################################
 # Objetivo: hacer un merge diario entre MODIS-MAIAC-AERONET C6.1
+
+
+
 ######################################################################
 
 
 ###########                          ------ BA ------
-data_modis_BA <- read.csv("/MODIS/MODIS_dia/BA-25KM-MODIS-60-AER-DIA.csv")
-data_maiac_BA <- read.csv("/C6.1/dia/3_BA-25KM-MAIAC-60-AER_MEAN.csv")
+data_modis_BA <- read.csv("BA-25KM-MODIS-60-AER-DIA.csv")
+data_maiac_BA <- read.csv("3_BA-25KM-MAIAC-60-AER_MEAN.csv")
 
 #Unir a partir de la columna llamda date
 
@@ -21,7 +24,7 @@ merge_sat <- data.frame(date = merge_sat$date,
 
 names(merge_sat) <- c("date", "AOD_550_MODIS_mean", "AOD_550_MAIAC_mean", "AOD_550_AER_mean")
 
-write.csv(merge_sat,"/MMA-C61/3_BA-25KM-MM-60-AER-C61.csv")
+write.csv(merge_sat,"3_BA-25KM-MM-60-AER-C61.csv")
 
 
 

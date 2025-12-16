@@ -1,6 +1,12 @@
 #######################################################################
 # Ejemplo de uso para el procesamiento de MAIAC 
 # Objetivo: Mostrar como leer, visualizar y extraer valores de MAIAC
+
+#Path de archivos guardados: 
+# 02_Datasets/MAIAC_C6.1/Latam_C61/1km60min
+# 02_Datasets/MAIAC_C6.1/Latam_C61/SP
+# 02_Datasets\MAIAC_C6.1\USA_C61
+
 #######################################################################
 
 
@@ -279,6 +285,7 @@ hdf_df_30000 <- data.frame()
 
 # Se corre la funcion por cada imagen HDF y se va guardando en un dataframe
 # Revisar librerias
+
 for (i in 1:length(id)){
   print(i)
   print(Sys.time())
@@ -289,3 +296,4 @@ for (i in 1:length(id)){
 }
 dire
 write.csv(hdf_df_30000 ,file = "prueba.csv")
+

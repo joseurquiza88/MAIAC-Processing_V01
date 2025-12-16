@@ -194,11 +194,11 @@ funcion_estadisticas_carpeta <- function(dire){
   return(df)
 }
 
-dire_1 <- "D:/Josefina/paper_git/paper_maiac/datasets/V02/processed/USA_C61/tot/1km/"
-dire_3 <- "D:/Josefina/paper_git/paper_maiac/datasets/V02/processed/USA_C61/tot/3km/"
-dire_5 <- "D:/Josefina/paper_git/paper_maiac/datasets/V02/processed/USA_C61/tot/5km/"
-dire_15 <- "D:/Josefina/paper_git/paper_maiac/datasets/V02/processed/USA_C61/tot/15km/"
-dire_25 <- "D:/Josefina/paper_git/paper_maiac/datasets/V02/processed/USA_C61/tot/25km/"
+dire_1 <- "processed/USA_C61/tot/1km/"
+dire_3 <- "processed/USA_C61/tot/3km/"
+dire_5 <- "processed/USA_C61/tot/5km/"
+dire_15 <- "USA_C61/tot/15km/"
+dire_25 <- "/USA_C61/tot/25km/"
 
 df_1 <- funcion_estadisticas_carpeta(dire_1)
 df_3 <- funcion_estadisticas_carpeta(dire_3)

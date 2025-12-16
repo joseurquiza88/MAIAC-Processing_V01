@@ -1,6 +1,13 @@
 #######################################################################
 # Objetivo: Integrar todos los dataframe de MAIAC procesados y generar
-# metricas estadisticas
+# metricas estadistica
+
+# Path MAIAC-AER
+# 02_Datasets\processed\merge_AER-MAIAC
+
+
+
+
 ######################################################################
 
 # Una prueba estadistica varia

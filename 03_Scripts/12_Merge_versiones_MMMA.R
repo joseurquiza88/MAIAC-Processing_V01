@@ -23,5 +23,5 @@ merge_sat <- data.frame(date = merge_sat$date,
                         AOD_550_AER_mean = merge_sat$AOD_550_AER_mean)
 
 
-write.csv(merge_sat,"/M6M61-AER-MOD/1_SP-25KM-60-M6M61-AER-MOD.csv")
+write.csv(merge_sat,"1_SP-25KM-60-M6M61-AER-MOD.csv")
 

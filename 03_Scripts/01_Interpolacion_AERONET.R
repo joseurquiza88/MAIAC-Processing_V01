@@ -4,6 +4,9 @@
 # la longitud de onda proporcionada por MAIAC-MODIS 
 # AOD 550 nm a traves de diferentes metodologias mencionadas 
 # en la literatura
+
+#Path de archivos guardados: "/02_Datasets/AERONET/"
+
 ###
 
 
@@ -121,4 +124,5 @@ interpolate_s (path=" ",path_write=" ")
 # VERSION 02
 interpolate(path=" ",path_write=" ")
 interpolate_s (path=" ",path_write=" ")
+
 

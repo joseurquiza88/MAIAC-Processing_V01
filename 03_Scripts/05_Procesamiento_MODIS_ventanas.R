@@ -2,6 +2,10 @@
 # Objetivo: calcular un promedio de las mediciones de AERONET para un
 # intervalo de tiempo dado, centrado en el sobrevuelo del satélite, 
 # con el fin de compararlo con el promedio de las recuperaciones de MODIS
+
+#Path de archivos guardados: 
+# 02_Datasets\processed\merge_AER-MAIAC-MODIS
+
 ######################################################################
 
 # Funcion para tomar el intervalo de tiempo dado +
@@ -121,4 +125,5 @@ for (i in 1:length(id)){
   name <- paste("/MODIS/",substr(id[i],1,20),"-DIA.csv",sep = "")
   write.csv(df_rbind,name)
 }
+
 

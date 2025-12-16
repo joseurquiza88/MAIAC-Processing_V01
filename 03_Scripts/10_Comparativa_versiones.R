@@ -1,5 +1,15 @@
 #######################################################################
 # Objetivo: Comparar versiones de MAIAC C6.0 vs C6.1
+
+# Path MAIAC 6.1
+# 02_Datasets\processed\merge_AER-MAIAC-MODIS
+# Path MAIAC-6.0
+# XXXXXX
+
+#Path de archivos guardados: 
+# 02_Datasets\processed\merge_AER-MAIAC_versiones
+
+
 ######################################################################
 
 
@@ -22,7 +32,7 @@ data_c06 <- read.csv("/C6.0/LP-25KM-MAIAC.csv")
 data_c061 <- read.csv("/C6.1/LP-25KM-MAIAC_C61.csv")
 
 data_c06 <- read.csv("/C6.0/MD-25KM-MAIAC.csv")
-data_c061 <- read.csv("/D:/Josefina/paper_git/paper_maiac/datasets/maiac/C6.1/MD-25KM-MAIAC_C61.csv")
+data_c061 <- read.csv("C6.1/MD-25KM-MAIAC_C61.csv")
 
 data_c06 <- read.csv("/C6.0/MX-25KM-MAIAC.csv")
 data_c061 <- read.csv("DC6.1/MX-25KM-MAIAC_C61.csv")

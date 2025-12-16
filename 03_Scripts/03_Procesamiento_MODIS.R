@@ -1,6 +1,10 @@
 #######################################################################
 # Ejemplo de uso para el procesamiento de MODIS DT 
 # Objetivo: Mostrar como leer, visualizar y extraer valores de MODIS DT
+
+#Path de archivos guardados: 
+# 02_Datasets/MODIS/
+
 ######################################################################
 
 
@@ -155,3 +159,5 @@ readMODIS <- function(file, latlong.range = NULL, border.shp = NULL) {
   names(modis.df.tot) <- c("day", "hour","AOD","n","null") 
   return(modis.df.tot)
 }
+
+
