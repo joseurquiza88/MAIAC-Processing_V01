@@ -18,35 +18,30 @@ Transformar **datos satelitales crudos** en información útil para:
 
 ## 🛠 Qué incluye
 
-- **Metodologia utilizada:** (🚧 En desarrollo)
-La carpeta [`/00_Informacion_de_Base`](./00_Informacion_de_Base/) reúne la metodología aplicada en cada etapa del proyecto, junto con la descripción de los productos utilizados 
+- **Metodologia utilizada:**
+La carpeta [`/00_Informacion_de_Base`](./00_Informacion_de_Base/) reúne la metodología aplicada en cada etapa del proyecto, junto con la descripción de los productos utilizados
+
+- **Requerimientos**
+La carpeta [`/01_Requerimientos`](./01_Requerimientos/) incluye los **requerimientos técnicos** para ejecutar los scripts en **R y Python**, donde se incluyen las librerías necesarias y su instalación.
 
 - **Procesamiento de datos:**  
 La carpeta [`/03_Scripts`](./03_Scripts/) muestra los codigos en R y Python para la descarga, recolección, limpieza, interpolación y análisis de variables satelitales utilizadas (AOD superficial y satelital), con integración final en un **dataset unificado**.
 
 - **Evaluacion del desempeño:**  
 La carpeta [`/03_Scripts`](./03_Scripts/) muestra los codigos en R y Python para el cálculo de métricas estadisticas como R², RMSE, Bias y la incertidumbre.
-  
-- **Ejemplos de uso** (🚧 En desarrollo)
-La carpeta [`/04_Codigos ejemplo`](./04_Codigos_ejemplo/) contiene scripts en Python y R que sirven como guía para cargar, visualizar y procesar las imágenes raster y los archivos asociados al proyecto.
 
-- **Requerimientos**  (🚧 En desarrollo)
-La carpeta [`/01_Requerimientos`](./01_Requerimientos/) incluye los **requerimientos técnicos** para ejecutar los scripts en **R y Python**, donde se incluyen las librerías necesarias y su instalación.
 
 ---
 
 ## 📦 Dataset disponibles
 - La carpeta [`/02_Datasets`](./02_Datasets/) contiene los datasets utilizados en este análisis de AOD satelital.  
-  ⚠️ **Nota:** los nombres de los archivos y/o las rutas pueden diferir de los utilizados actualmente en el código, ya que el repositorio se encuentra en proceso de organización.
+  *<sub>⚠️ Nota: los nombres de los archivos y/o las rutas pueden diferir de los utilizados actualmente en el código, ya que el repositorio se encuentra en proceso de organización.</sub>*
 
 ---
-
-
----
-## 🌐 Dashboard interactivo (🚧 En desarrollo)
+## 🌐 Dashboard interactivo
 
 Objetivo: Visualizar y explora los resultados obtenidos en este proyecto para distintas ciudades de América Latina con un **dashboard interactivo en Streamlit**:
-- 🔹 [Abrir el dashboard](https://maiac-processingv01-wgkrecfxhazpyniya2qsd8.streamlit.app/)
+- 🔹 [Abrir el dashboard de streamlit](https://maiac-processingv01-wgkrecfxhazpyniya2qsd8.streamlit.app/)
 
 
 ---
